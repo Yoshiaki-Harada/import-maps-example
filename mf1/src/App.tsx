@@ -2,6 +2,12 @@ import type { Component } from 'solid-js';
 
 import logo from './logo.svg';
 import styles from './App.module.css';
+import Mf1 from './Mf1';
+import { customElement } from 'solid-element';
+
+customElement('mf1-component',{}, ()=>{
+  return Mf1
+})
 
 const App: Component = () => {
   return (
@@ -20,6 +26,8 @@ const App: Component = () => {
           Learn Solid
         </a>
       </header>
+      <mf1-component></mf1-component>
+      <Mf1></Mf1>
     </div>
   );
 };
