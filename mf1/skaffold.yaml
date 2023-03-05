@@ -1,0 +1,17 @@
+apiVersion: skaffold/v4beta2
+kind: Config
+metadata:
+  name: mf1
+build:
+  artifacts:
+  - image: localhost/mf1
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  helm:
+    releases:
+    - name: mf1
+      chartPath: deploy
+      valuesFiles:
+      - deploy/values.yaml
+      version: 1.0.0
