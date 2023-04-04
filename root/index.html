@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+    <script type="importmap-shim">
+      {
+        "imports": {
+          "mf1-component": "/asset/mf1-component.umd.js"
+        }
+      }
+      </script>
+      <script type="module-shim">
+        import 'mf1-component';
+      </script>
     <title>Solid App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
-    <script src="/src/index.tsx" type="module"></script>
+    <script src="/src/index.tsx" type="module-shim"></script>
   </body>
 </html>
